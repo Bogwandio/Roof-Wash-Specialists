@@ -34,18 +34,17 @@ body {
 
 .contact-icon:hover {
   background-color: #007bff;
-  /* Hover background color */
   transform: scale(1.1);
 }
 
 /* Navigation Link Animation */
 
-.nav-link {
+.nav-item {
   position: relative;
   z-index: 1000;
 }
 
-.nav-link::after {
+.nav-item::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -56,11 +55,11 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-item:hover::after {
   width: 100%;
 }
 
-.nav-link.active::after {
+.nav-item.active::after {
   width: 100%;
 }
 
@@ -87,45 +86,35 @@ body {
 
 .hero {
   position: relative;
-  /* Position context for the pseudo-element */
   background-image: url(../resources/images/1920x1080-webp/10\ -\ Ryans\ Waterblasting\ Photos_1920px.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 75vh;
-  /* Adjust based on your needs */
 }
 
 .hero::before {
   content: '';
-  /* Creates an empty element */
   position: absolute;
-  /* Position it over the image */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
-  /* Darken the image with a semi-transparent black */
   z-index: 0;
-  /* Put it behind the content */
 }
 
-/* Ensure the content has a higher z-index than the overlay */
 .hero .text-center {
   position: relative;
   z-index: 1;
-  /* Ensures content is above the overlay */
 }
 
 .hero h1 {
   animation: slideUp 1s ease-out forwards;
 }
 
-/* Optional delay for the paragraph to animate after the heading */
 .hero p {
   animation: slideUp 1s ease-out forwards;
-  /* Added delay of 0.5s */
   animation-delay: 0.2s;
   opacity: 0;
   transform: translateX(0);
@@ -234,6 +223,17 @@ body {
 }
 
 @media only screen and (min-width: 1025px) {
+
+  .serivces-nav-item {
+    position: relative;
+  }
+
+  .services-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
 
   .service-card-wrapper {
     animation: slideLeft 1.5s ease-out forwards;
