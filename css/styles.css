@@ -3,26 +3,16 @@ body {
   overflow-x: hidden;
 }
 
-.navbar,
-footer {
-  background-color: #ffffff;
-  color: #3a4f64;
-  height: 100px;
-  z-index: 1000;
-}
-
 body {
   background-color: #f4f8fb;
 }
 
-/* NAVBAR */
-
-.navbar-nav {
-  z-index: 1000;
-}
-
 .navbar-collapse {
   background-color: #ffffff;
+}
+
+.navbar-toggler {
+  border: none;
 }
 
 /* Navigation Contact Icon Animation */
@@ -37,49 +27,49 @@ body {
   transform: scale(1.1);
 }
 
-/* Navigation Link Animation */
-
-.nav-item {
-  position: relative;
-  z-index: 1000;
+.active, .nav-item:hover .nav-link, .nav-item:focus .nav-link, .dropdown-item:hover, .dropdown-item:focus {
+  background-color: #3a4f64;
+  color: #ffffff !important;
+  cursor: pointer;
 }
 
-.nav-item::after {
-  content: '';
+/* Services Dropdown Menu */
+
+.dropdown-menu {
+  border-radius: 0;
+  border: none;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: none;
   position: absolute;
-  bottom: 0;
+  top: 100%;
   left: 0;
-  width: 0;
-  height: 5px;
-  background-color: #3a4f64;
-  transition: width 0.3s ease;
-}
-
-.nav-item:hover::after {
   width: 100%;
+  transition: none;
+  animation-fill-mode: forwards;
 }
 
-.nav-item.active::after {
-  width: 100%;
+.dropdown-menu.show {
+  visibility: visible;
+  animation: expandFromBottom 1s ease-out forwards;
+  transition: none;
 }
 
-.navbar-toggler {
-  background-color: #3a4f64;
-}
-
-.navbar-toggler-icon {
-  filter: invert(100%) brightness(100%);
+.dropdown-menu {
+  transition: max-height 0s, opacity 0s;  /* Prevent other transitions from affecting the dropdown after animation */
 }
 
 /* Navigation Logo */
 
-.logo {
+.navbar-brand {
   background-image: url(../resources/logo.jpg);
-  background-size: 135%;
+  background-size: 150%;
   background-position: center center;
-  height: 75px;
-  width: 200px;
   background-repeat: no-repeat;
+  height: 80px;              /* Set the height of the navbar container */
+  width: 200px;               /* Automatically adjust the width */
 }
 
 /* Hero Image Animation */
@@ -117,7 +107,22 @@ body {
   animation: slideUp 1s ease-out forwards;
   animation-delay: 0.2s;
   opacity: 0;
-  transform: translateX(0);
+}
+
+.hero button {
+  background-color: #3a4f64;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.hero button:focus, .hero button:hover {
+  transform: scale(1.1);
+  background-color: #3a4f64;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .img-slide-left, .img-slide-right {
@@ -181,6 +186,18 @@ body {
   }
 }
 
+@keyframes expandFromBottom {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
 .service-card-wrapper {
   opacity: 0;
   transform: translateX(0);
@@ -224,7 +241,11 @@ body {
 
 @media only screen and (min-width: 1025px) {
 
-  .serivces-nav-item {
+  body {
+    padding-right: 0 !important;  /* Prevent padding-right from being applied */
+  }
+
+  .services-nav-item {
     position: relative;
   }
 

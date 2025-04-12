@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roof Wash Specialists</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/01ae6696ec.js" crossorigin="anonymous"></script>
     <link href="./css/styles.css" rel="stylesheet">
 </head>
@@ -14,60 +15,59 @@
 
     <!-- Header -->
     <header>
-
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg px-lg-4 position-sticky top-0">
-
-            <!-- Logo -->
-            <a class="navbar-brand ms-3" href="#">
-                <div class="logo rounded"></div>
-            </a>
-
-            <!-- Mobile Menu Toggle -->
-            <button type="button" class="navbar-toggler outline-0 shadow-none border-0 me-3" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Menu -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="container-fluid d-flex justify-content-center justify-content-lg-end align-items-center">
-
-                    <!-- Navigation Links -->
-                    <ul class="navbar-nav d-flex flex-column flex-lg-row text-center">
-                        <li class="nav-item my-1 mx-1 my-lg-0 active">
-                            <a href="#" class="nav-link" aria-current="page">Home</a>
-                        </li>
-                        <li class="nav-item my-1 mx-1 my-lg-0">
-                            <a href="/about.html" class="nav-link">About Us</a>
-                        </li>
-
-                        <!-- Services Dropdown -->
-                        <li class="nav-item my-1 mx-1 my-lg-0 dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item">Roof Treatments</a>
-                                <a href="#" class="dropdown-item">House Washing</a>
-                                <a href="#" class="dropdown-item">Gutter Cleaning</a>
-                                <a href="#" class="dropdown-item">Deck & Driveway Cleaning</a>
-                                <a href="#" class="dropdown-item">Window Cleaning</a>
-                            </div>
-                        </li>
-                        <li class="nav-item my-1 mx-1 my-lg-0">
-                            <a href="/contact.html" class="nav-link">Contact Us</a>
-                        </li>
-                    </ul>
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid d-flex flex-nowrap">
+                <div class="d-flex justify-content-start">
+                    <a class="navbar-brand rounded" href="#"></a>
                 </div>
 
-                <!-- Contact/Social Icons -->
-                <div class="d-flex justify-content-center justify-content-lg-end my-2 my-lg-0 mx-2">
-                    <a href="tel:027 312 5777" class="contact-icon text-white rounded-3 p-2 mx-2">
+                <div class="d-flex justify-content-end align-items-center">
+                    <a href="tel:027 312 5777" class="contact-icon text-white rounded-3 p-2 mx-2 d-none d-sm-block">
                         <i class="fa-solid fa-phone-volume fa-lg"></i>
                     </a>
-                    <a href="mailto:youremail@outlook.com" class="contact-icon text-white rounded-3 p-2 mx-2">
+                    <a href="mailto:youremail@outlook.com"
+                        class="contact-icon text-white rounded-3 p-2 mx-2 d-none d-sm-block">
                         <i class="fa-solid fa-envelope fa-lg"></i>
                     </a>
+                    <button class="navbar-toggler mx-4" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle Navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header d-flex justify-content-center">
+                        <a class="navbar-brand rounded" href="#"></a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 text-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about.html">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Services</a>
+                                <ul class="dropdown-menu text-center">
+                                    <li><a class="dropdown-item small">Roof Treatment</a></li>
+                                    <li><a class="dropdown-item small">House Wash</a></li>
+                                    <li><a class="dropdown-item small">Gutter Cleaning</a></li>
+                                    <li><a class="dropdown-item small">Deck & Driveway Cleaning</a></li>
+                                    <li><a class="dropdown-item small">Window Cleaning</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -79,12 +79,13 @@
         <section>
             <div class="container-fluid hero d-flex align-items-center justify-content-center">
                 <div class="px-4 py-5 text-center">
-                    <h1 class="display-1 text-white mb-3">Roof Wash Sepecialists</h1>
+                    <h1 class="display-1 text-white mb-3">Roof Wash Specialists</h1>
                     <div class="col-lg-6 mx-auto">
-                        <p class="lead mb-4 text-white">Trust us to keep your home or business clean, safe, and
+                        <p class="lead mb-2 text-white">Trust us to keep your home or business clean, safe, and
                             well-maintained with our expert roof washing services.
                         </p>
                         <p class="lead mb-4 text-white">Contact us today for a free consultation!</p>
+                        <button class="btn btn-primary btn-lg px-4 rounded-pill">Free Quote</button>
                     </div>
                 </div>
             </div>
@@ -92,7 +93,7 @@
 
         <!-- About Us -->
         <section>
-            <div class="container text-center text-lg-start mt-lg-4">
+            <div class="container about-us text-center text-lg-start mt-lg-4">
                 <div class="row d-flex align-items-center">
                     <div class="col-12 col-lg-7 p-4">
                         <h2 class="display-4">About Us</h2>
@@ -121,37 +122,9 @@
                             pellentesque sem placerat in id cursus mi.</p>
                     </div>
                 </div>
-                <div class="row d-flex align-items-center">
-                    <div class="col-12 col-lg-7 p-4">
-                        <h2 class="display-4">Our Guarantee</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipiscing elit. Amet consectetur
-                            adipiscing elit
-                            quisque faucibus ex sapien. Quisque faucibus ex sapien vitae pellentesque sem placerat.
-                            Vitae
-                            pellentesque sem placerat in id cursus mi.</p>
-                    </div>
-                    <div class="col-12 col-lg-5 p-2 p-lg-4">
-                        <img src="./resources/images/1024x682-webp/05 - Ryans Waterblasting Photos_1024.webp"
-                            class="img-fluid img-slide-left rounded shadow-lg">
-                    </div>
-                </div>
-                <div class="row d-flex align-items-center">
-                    <div class="col-12 col-lg-5 p-2 p-lg-4">
-                        <img src="./resources/images/1024x682-webp/06 - Ryans Waterblasting Photos_1024.webp"
-                            class="img-fluid img-slide-right rounded shadow-lg">
-                    </div>
-                    <div class="col-12 col-lg-7 p-4">
-                        <h3 class="display-4">Our Services</h3>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipiscing elit. Amet consectetur
-                            adipiscing elit
-                            quisque faucibus ex sapien. Quisque faucibus ex sapien vitae pellentesque sem placerat.
-                            Vitae
-                            pellentesque sem placerat in id cursus mi.</p>
-                    </div>
-                </div>
             </div>
 
-            <!-- Cards -->
+            <!-- Why Choose Us? -->
             <div class="container text-center mt-lg-4">
                 <div class="row gy-4">
                     <div class="col-12">
@@ -209,7 +182,9 @@
 
     <footer class="">
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
