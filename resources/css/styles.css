@@ -1,0 +1,329 @@
+/* GLOBAL */
+
+html,
+.bg-base {
+    background-color: #f4f3f0;
+    color: #003342 !important;
+}
+
+.bg-primary {
+    background-color: #003342 !important;
+    color: #f4f3f0 !important;
+}
+
+.bg-secondary {
+    background-color: #9bbab5 !important;
+}
+
+
+/* HEADER */
+
+nav,
+.offcanvas,
+.dropdown-menu {
+    background-color: #f4f3f0;
+}
+
+.navbar-brand,
+.offcanvas-title,
+.nav-link,
+.nav-item,
+.navbar-nav .nav-link.dropdown-toggle:not(.show),
+.navbar .btn:hover,
+.navbar .btn:focus,
+.hero-btn {
+    color: #003342 !important;
+    background-color: #f4f3f0 !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.dropdown-toggle.show,
+.navbar-nav .nav-link.dropdown-toggle:not(.show):hover,
+.navbar-nav .nav-link.dropdown-toggle:focus,
+.dropdown-item:hover,
+.dropdown-item:focus,
+.navbar .btn:hover,
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: #003342 !important;
+    color: #f4f3f0 !important;
+}
+
+.dropdown-item {
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar .btn {
+    border-color: #003342;
+    border: solid 2px;
+}
+
+.navbar-toggler,
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 51, 66, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav .dropdown-menu {
+    position: static !important;
+    float: none;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    display: block;
+    pointer-events: none;
+}
+
+.navbar-nav .dropdown-menu.show {
+    max-height: 1000px;
+    opacity: 1;
+    transform: scaleY(1);
+    pointer-events: auto;
+}
+
+
+/* HERO */
+
+.hero {
+    position: relative;
+    background-image: url('../images/1920x1080-webp/04\ -\ Ryans\ Waterblasting\ Photos_1920px.webp');
+    background-size: cover;
+    background-position: 15% 15%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #f4f3f0;
+}
+
+.hero .overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+}
+
+.hero .hero-content {
+    z-index: 1;
+    position: relative;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .d-grid,
+.hero-content span {
+    opacity: 0;
+    transform: translateX(-100%);
+    position: relative;
+}
+
+.hero-content span {
+    display: inline-block;
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.hero-content h1 {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.hero-content p {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.hero-content .d-grid {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.7s;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: bounce 2s infinite;
+    color: #f4f3f0;
+}
+
+/* ABOUT US */
+
+.section-divider-top {
+    background-image: url(../images/svg/layered-waves-haikei-top.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 8em;
+    width: 100%;
+}
+
+.section-divider-bottom {
+    background-image: url(../images/svg/layered-waves-haikei-bottom.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 8em;
+    width: 100%;
+}
+
+/* BREAKPOINTS */
+
+/* HORIZONTAL PHONES */
+
+@media only screen and (min-width: 36em) {
+    .section-divider-bottom {
+        height: 10em;
+    }
+
+    .section-divider-top {
+        height: 10em;
+    }
+}
+
+/* TABLETS */
+
+@media only screen and (min-width: 48em) {
+    .section-divider-bottom {
+        height: 15em;
+    }
+
+    .section-divider-top {
+        height: 15em;
+    }
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 62em) {
+    .section-divider-bottom {
+        height: 18em;
+    }
+
+    .section-divider-top {
+        height: 18em;
+    }
+}
+
+@media only screen and (min-width: 75em) {
+    .section-divider-bottom {
+        height: 21em;
+    }
+
+    .section-divider-top {
+        height: 21em;
+    }
+}
+
+@media only screen and (min-width: 90em) {
+    .section-divider-bottom {
+        height: 27em;
+    }
+
+    .section-divider-top {
+        height: 27em;
+    }
+}
+
+@media only screen and (min-width: 120em) {
+    .section-divider-bottom {
+        height: 38em;
+    }
+
+    .section-divider-top {
+        height: 38em;
+    }
+}
+
+@media only screen and (min-width: 160em) {
+    .section-divider-bottom {
+        height: 40em;
+    }
+
+    .section-divider-top {
+        height: 40em;
+    }
+}
+
+/* ANIMATIONS */
+.animate-on-scroll {
+    opacity: 0;
+    will-change: opacity, transform;
+}
+
+/* Keyframes for left slide */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for right slide */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100vw); /* Slide in from the right */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply keyframes for left and right sliding */
+.slide-in-left.start-animation {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right.start-animation {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(-100vw);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
