@@ -101,7 +101,7 @@ nav,
 
 .hero {
     position: relative;
-    background-image: url('../images/1920x1080-webp/04\ -\ Ryans\ Waterblasting\ Photos_1920px.webp');
+    background-image: url(resources/images/1920x1080-webp/04\ -\ Ryans\ Waterblasting\ Photos_1920px.webp);
     background-size: cover;
     background-position: 15% 15%;
     background-repeat: no-repeat;
@@ -168,7 +168,7 @@ nav,
 /* ABOUT US */
 
 .section-divider-top {
-    background-image: url(../images/svg/layered-waves-haikei-top.svg);
+    background-image: url(resources/images/svg/layered-waves-haikei-top.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -177,7 +177,7 @@ nav,
 }
 
 .section-divider-bottom {
-    background-image: url(../images/svg/layered-waves-haikei-bottom.svg);
+    background-image: url(resources/images/svg/layered-waves-haikei-bottom.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
