@@ -15,18 +15,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script defer src="resources/js/accessibility.js"></script>
     <script defer src="resources/js/scrollAnimation.js"></script>
-    
+    <script defer src="resources/js/slider.js"></script>
+
 </head>
 
 <body>
 
     <header>
         <nav class="navbar fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Roof Wash Specialists</a>
+            <div class="container-fluid d-flex justify-content-end align-items-center gap-2 pe-3">
 
-                <div class="ms-auto me-2 d-none d-md-block">
-                    <a href="pages/contact.html" class="btn btn-sm d-flex align-items-center"><span
+                <div class="d-none d-md-block">
+                    <a href="pages/contact.html" class="btn btn-md d-flex align-items-center"><span
                             class="material-symbols-outlined me-1">
                             home_work
                         </span>Request a Quote</a>
@@ -39,7 +39,7 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Roof Wash Specialists</h5>
+                        <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Roof Wash Specialists</h3>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
@@ -57,32 +57,36 @@
                                     </span>About Us</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="pages/services.html" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false"><span
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="pages/services.html"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false"><span
                                         class="material-symbols-outlined mx-2">
                                         handyman
                                     </span>Services</a>
                                 <ul class="dropdown-menu rounded-0">
-                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4" href="pages/roof-treatment.html"><span
+                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
+                                            href="pages/roof-treatment.html"><span
                                                 class="material-symbols-outlined mx-2">
                                                 roofing
                                             </span>Roof Treatment</a>
                                     </li>
-                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4" href="pages/house-wash.html"><span
-                                                class="material-symbols-outlined mx-2">
+                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
+                                            href="pages/house-wash.html"><span class="material-symbols-outlined mx-2">
                                                 water_damage
                                             </span>House Wash</a></li>
-                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4" href="pages/gutter-cleaning.html"><span
+                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
+                                            href="pages/gutter-cleaning.html"><span
                                                 class="material-symbols-outlined mx-2">
                                                 tools_ladder
                                             </span>Gutter Cleaning</a>
                                     </li>
-                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4" href="pages/deck-and-driveway-cleaning.html"><span
+                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
+                                            href="pages/deck-and-driveway-cleaning.html"><span
                                                 class="material-symbols-outlined mx-2">
                                                 deck
                                             </span>Deck & Driveway
                                             Cleaning</a></li>
-                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4" href="pages/window-cleaning.html"><span
+                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
+                                            href="pages/window-cleaning.html"><span
                                                 class="material-symbols-outlined mx-2">
                                                 window
                                             </span>Window Cleaning</a>
@@ -128,21 +132,19 @@
                     </div>
                 </div>
             </div>
-            <a href="#about-us" class="scroll-indicator d-flex flex-column align-items-center text-decoration-none">
-                <p class="mb-0"><small>More Information...</small></span>
-                <p class="material-symbols-outlined fs-1 fw-bold">
-                    keyboard_arrow_down
-                </p>
+            <a href="#about-us" class="scroll-indicator text-decoration-none d-flex flex-column align-items-center">
+                <small>More Information</small>
+                <span class="material-symbols-outlined fs-1 fw-bold">keyboard_arrow_down</span>
             </a>
         </section>
 
-        <div id="about-us" class="w-100 section-divider-top"></div>
+        <div id="about-us" class="w-100 waves-top"></div>
 
-        <section class="about-us bg-primary">
-            <div class="container p-4 p-lg-0">
-                <div class="animate-on-scroll slide-in-left row py-lg-4 d-flex align-items-center g-5 g-lg-2">
-                    <div class="col-12 col-lg-5 col-xl-7 p-4 p-lg-4">
-                        <div class="d-flex flex-nowrap align-items-center pt-3 pt-lg-0">
+        <section class="bg-primary">
+            <div class="container p-4">
+                <div class="animate-on-scroll slide-in-left row py-lg-4 d-flex align-items-center ">
+                    <div class="col-12 col-lg-6 col-xl-7">
+                        <div class="d-flex flex-nowrap align-items-center">
                             <h2 class="display-5">About Us</h2>
                             <span class="material-symbols-outlined fs-1 ms-2">
                                 supervisor_account
@@ -157,22 +159,22 @@
                         <p>Proudly locally owned, we’re committed to raising
                             the standard of exterior care across the Wellington Region, one property at a time.</p>
                     </div>
-                    <div class="d-none d-lg-flex col-12 col-lg-7 col-xl-5">
-                        <img class="img-fluid rounded-3 shadow-lg"
+                    <div class="d-none d-lg-flex col-12 col-lg-6 col-xl-5">
+                        <img class="img-fluid rounded-3 shadow"
                             src="./resources/images/1024x682-webp/05 - Ryans Waterblasting Photos_1024.webp">
                     </div>
                 </div>
-                <div class="animate-on-scroll slide-in-right row py-lg-4 d-flex align-items-center g-5 g-lg-2">
-                    <div class="d-none d-lg-flex col-12 col-lg-7 col-xl-5">
-                        <img class="img-fluid rounded-3 shadow-lg"
+                <div class="animate-on-scroll slide-in-right row py-lg-4 d-flex align-items-center">
+                    <div class="d-none d-lg-flex col-12 col-lg-6 col-xl-5">
+                        <img class="img-fluid rounded-3 shadow"
                             src="./resources/images/1024x682-webp/06 - Ryans Waterblasting Photos_1024.webp">
                     </div>
-                    <div class="col-12 col-lg-5 col-xl-7 p-4 p-lg-4">
-                        <div class="d-flex flex-nowrap align-items-center pt-3 pt-lg-0">
+                    <div class="col-12 col-lg-6 col-xl-7">
+                        <div class="d-flex flex-nowrap align-items-center pt-4 pt-lg-0">
                             <h2 class="display-5">Our Approach</h2>
                             <span class="material-symbols-outlined fs-1 ms-2">
                                 waving_hand
-                                </span>
+                            </span>
                         </div>
                         <h3>Quality & Care</h3>
                         <p>Quality isn’t just about clean surfaces — it’s about the care we
@@ -188,10 +190,143 @@
                 </div>
             </div>
         </section>
-        <div class="w-100 section-divider-bottom"></div>
-        
-        
-        
+
+        <div class="w-100 waves-bottom"></div>
+
+        <section class="bg-base">
+            <div class="container p-4 p-lg-0">
+                <div class="row py-4 d-flex align-items-center">
+                    <div class="col-12 col-lg-6">
+
+                        <div class="slide-in-up animate-on-scroll d-flex align-items-center">
+                            <h2 class="display-5">Why Choose Us?</h2>
+                            <span class="material-symbols-outlined fs-1 ms-2">
+                                cheer
+                            </span>
+                        </div>
+
+                        <div class="slide-in-up animate-on-scroll">
+                            <h3>Our Values</h3>
+                            <p>At the heart of our exterior cleaning services are four core values — affordability,
+                                quality,
+                                professionalism, and proven results. We’re committed to delivering reliable service at
+                                fair
+                                prices, using trusted methods and equipment to bring out the best in every property we
+                                clean. When you choose us, you choose a team that takes pride in doing the job right.
+                            </p>
+                        </div>
+
+                        <div class="slide-in-up animate-on-scroll">
+                            <h3>Our Guarantee</h3>
+                            <p>We stand behind every job we do. If you’re not completely satisfied, we’ll make it right
+                                — no excuses, no hidden fees. Our guarantee is simple: honest service, professional
+                                results, and your peace of mind. When you choose us, you’re choosing a team that’s
+                                committed to quality from start to finish.
+                            </p>
+                        </div>
+
+                        <div class="slide-in-up animate-on-scroll">
+                            <h3>Satisfied Customers</h3>
+                            <p>Our work speaks for itself — and so do the people we serve. From homeowners to business
+                                owners, we’ve built lasting relationships based on trust, quality, and consistent
+                                results. See why so many across the Wellington Region choose us for their exterior
+                                cleaning needs. Their satisfaction is our success.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="row py-4 g-4 text-center">
+                            <div class="col-12 col-lg-6">
+                                <div class="slide-in-up animate-on-scroll card shadow-lg h-100 p-3 bg-primary">
+                                    <span class="material-symbols-outlined pt-1 fs-1">savings</span>
+                                    <span class="display-6">Affordable</span>
+                                    <p class="lead mb-0 pt-3">We believe in fair pricing with no surprises — offering
+                                        high-quality exterior cleaning that fits your budget without compromising
+                                        results.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="slide-in-up animate-on-scroll card shadow-lg h-100 p-3 bg-primary">
+                                    <span class="material-symbols-outlined pt-1 fs-1">thumb_up</span>
+                                    <span class="display-6">Quality</span>
+                                    <p class="lead mb-0 pt-3">From the products we use to the care we take, quality is
+                                        at the core of every service we provide — ensuring a lasting clean every time.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="slide-in-up animate-on-scroll card shadow-lg h-100 p-3 bg-primary">
+                                    <span class="material-symbols-outlined pt-1 fs-1">engineering</span>
+                                    <span class="display-6">Professional</span>
+                                    <p class="lead mb-0 pt-3">Our team is punctual, courteous, and fully trained,
+                                        delivering a seamless experience with attention to detail and respect for your
+                                        property.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="slide-in-up animate-on-scroll card shadow-lg h-100 p-3 bg-primary">
+                                    <span class="material-symbols-outlined pt-1 fs-1">sentiment_very_satisfied</span>
+                                    <span class="display-6">Results</span>
+                                    <p class="lead mb-0 pt-3">We go beyond surface cleaning — our work restores the look
+                                        and feel of your home or business, leaving it fresh, bright, and like new.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-base py-4">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-12 col-lg-6">
+                        <div class="b-a-container position-relative d-grid overflow-hidden rounded-3">
+                            <div class="image-container mw-100">
+                                <img class="image-before img-fluid h-100 d-block position-absolute"
+                                    src="./resources/images/1024x682-webp/09 - Ryans Waterblasting Photos_1024.webp"
+                                    alt="Before Image">
+                                <img class="image-after img-fluid w-100 h-100 d-block"
+                                    src="./resources/images/1024x682-webp/10 - Ryans Waterblasting Photos_1024.webp"
+                                    alt="After Image">
+                            </div>
+                            <input type="range" min="0" max="100" value="50" class="b-a-slider position-absolute opacity-0"
+                                aria-label="Percentage of before photo shown">
+                            <div class="b-a-slider-line position-absolute"></div>
+                            <div class="b-a-slider-button position-absolute bg-primary p-2 d-grid shadow-sm" aria-hidden="true"><span class="material-symbols-outlined">
+                                    arrow_range
+                                </span></div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+
+                        <div class="slide-in-up animate-on-scroll d-flex align-items-center">
+                            <h2 class="display-5">Proven Results</h2>
+                            <span class="material-symbols-outlined fs-1 ms-2">
+                                cleaning_bucket
+                            </span>
+                        </div>
+                        <div class="slide-in-up animate-on-scroll">
+                            <h3>Our Results</h3>
+                            <p>We don’t just clean — we transform. Our work speaks for itself, bringing life back to
+                                tired exteriors and creating spaces that shine. From stubborn roof stains to
+                                weather-worn decks, we deliver noticeable results that boost curb appeal and protect
+                                your investment. See the before-and-after difference our team consistently delivers.
+                            </p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="w-100 waves-top"></div>
+
+
 
     </main>
 
