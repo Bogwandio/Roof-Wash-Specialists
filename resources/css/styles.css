@@ -15,27 +15,42 @@ html,
     background-color: #9bbab5 !important;
 }
 
-
 /* HEADER */
 
-nav,
+nav {
+    background-color: tra;
+}
+
 .offcanvas,
 .dropdown-menu {
     background-color: #f4f3f0;
 }
 
-.navbar-brand,
 .offcanvas-title,
 .nav-link,
 .nav-item,
 .navbar-nav .nav-link.dropdown-toggle:not(.show),
 .navbar .btn:hover,
 .navbar .btn:focus,
-.hero-btn {
+.hero-btn,
+.navbar .btn,
+.navbar-toggler {
     color: #003342 !important;
     background-color: #f4f3f0 !important;
 }
 
+.navbar .btn {
+    height: 42px;
+}
+
+.navbar .btn,
+.navbar-toggler,
+.hero-btn {
+    border: 2px solid transparent !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover,
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus,
@@ -45,6 +60,7 @@ nav,
 .dropdown-item:hover,
 .dropdown-item:focus,
 .navbar .btn:hover,
+.navbar .btn:focus,
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: #003342 !important;
@@ -55,16 +71,27 @@ nav,
     transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.navbar .btn {
-    border-color: #003342;
-    border: solid 2px;
+.navbar .btn:hover,
+.navbar .btn:focus,
+.navbar-toggler:hover,
+.navbar-toggler:focus,
+.hero-btn:hover,
+.hero-btn:focus {
+    border: #f4f3f0 2px solid !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
 
 .navbar-toggler,
-.navbar-toggler:hover,
-.navbar-toggler:focus {
+.navbar-toggler:hover {
     border: none;
     box-shadow: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar-toggler:focus .navbar-toggler-icon,
+.navbar-toggler:hover .navbar-toggler-icon { 
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(244, 243, 240, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-toggler-icon {
@@ -130,7 +157,7 @@ nav,
 .hero-content .d-grid,
 .hero-content span {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-100vw);
     position: relative;
 }
 
@@ -159,42 +186,93 @@ nav,
     position: absolute;
     bottom: 10%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50vw);
     z-index: 2;
     animation: bounce 2s infinite;
     color: #f4f3f0;
+    text-align: center;
 }
 
 /* ABOUT US */
 
-.section-divider-top {
+/* RESULTS */
+
+/* BEFORE AND AFTER */
+
+.b-a-container {
+    place-content: center;
+    --position: 50%;
+}
+
+.image-before {
+    inset: 0;
+    clip-path: inset(0 calc(100% - var(--position)) 0 0);
+}
+
+.image-before,
+.image-after {
+    object-fit: cover;
+    object-position: left;
+}
+
+.b-a-slider {
+    inset: 0;
+    cursor: pointer;
+}
+
+.b-a-slider:focus-visible ~ .b-a-slider-button {
+    outline: 4px solid #003342;
+    outline-offset: 3px;
+}
+
+.b-a-slider-line {
+    inset: 0;
+    width: 0.2rem;
+    background-color: #f4f3f0;
+    z-index: 10;
+    left: var(--position);
+    transform: translate(-50%);
+    pointer-events: none;
+}
+
+.b-a-slider-button {
+    background-color: #f4f3f0;
+    border-radius: 100vw;
+    place-items: center;
+    top: 50%;
+    left: var(--position);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* PAGE DIVIDERS */
+
+.waves-top {
     background-image: url(../images/svg/layered-waves-haikei-top.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
     height: 8em;
-    width: 100%;
 }
 
-.section-divider-bottom {
+.waves-bottom {
     background-image: url(../images/svg/layered-waves-haikei-bottom.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
     height: 8em;
-    width: 100%;
 }
+
+
 
 /* BREAKPOINTS */
 
 /* HORIZONTAL PHONES */
 
 @media only screen and (min-width: 36em) {
-    .section-divider-bottom {
-        height: 10em;
-    }
-
-    .section-divider-top {
+    .waves-bottom,
+    .waves-top {
         height: 10em;
     }
 }
@@ -202,11 +280,8 @@ nav,
 /* TABLETS */
 
 @media only screen and (min-width: 48em) {
-    .section-divider-bottom {
-        height: 15em;
-    }
-
-    .section-divider-top {
+    .waves-bottom,
+    .waves-top {
         height: 15em;
     }
 }
@@ -214,62 +289,59 @@ nav,
 /* DESKTOP */
 
 @media only screen and (min-width: 62em) {
-    .section-divider-bottom {
-        height: 18em;
-    }
-
-    .section-divider-top {
+    .waves-bottom,
+    .waves-top {
         height: 18em;
     }
 }
 
 @media only screen and (min-width: 75em) {
-    .section-divider-bottom {
-        height: 21em;
-    }
-
-    .section-divider-top {
+    .waves-bottom,
+    .waves-top {
         height: 21em;
     }
 }
 
 @media only screen and (min-width: 90em) {
-    .section-divider-bottom {
-        height: 27em;
-    }
-
-    .section-divider-top {
+    .waves-bottom,
+    .waves-top {
         height: 27em;
     }
 }
 
 @media only screen and (min-width: 120em) {
-    .section-divider-bottom {
-        height: 38em;
-    }
-
-    .section-divider-top {
+    .waves-bottom,
+    .waves-top {
         height: 38em;
     }
 }
 
 @media only screen and (min-width: 160em) {
-    .section-divider-bottom {
-        height: 40em;
-    }
-
-    .section-divider-top {
+    .waves-bottom,
+    .waves-top {
         height: 40em;
     }
 }
 
 /* ANIMATIONS */
+
 .animate-on-scroll {
     opacity: 0;
     will-change: opacity, transform;
 }
 
-/* Keyframes for left slide */
+.slide-in-left.start-animation {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right.start-animation {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.slide-in-up.start-animation {
+    animation: slideInUp 1s ease-out forwards;
+}
+
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -282,11 +354,10 @@ nav,
     }
 }
 
-/* Keyframes for right slide */
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(100vw); /* Slide in from the right */
+        transform: translateX(100vw);
     }
 
     to {
@@ -295,18 +366,9 @@ nav,
     }
 }
 
-/* Apply keyframes for left and right sliding */
-.slide-in-left.start-animation {
-    animation: slideInLeft 0.8s ease-out forwards;
-}
-
-.slide-in-right.start-animation {
-    animation: slideInRight 0.8s ease-out forwards;
-}
-
 @keyframes slideInUp {
     from {
-        transform: translateY(-100vw);
+        transform: translateY(100vw);
         opacity: 0;
     }
 
