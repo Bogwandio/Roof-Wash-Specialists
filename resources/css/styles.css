@@ -1,39 +1,74 @@
 /* GLOBAL */
 
-.col-primary {
-    color: #f4f3f0 !important;
+/* HOME PAGE */
+
+.cover {
+    background-image: url(../images/1920x1080-webp/04\ -\ Ryans\ Waterblasting\ Photos_1920px.webp);
+    background-position: 15% 15%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-html,
-.bg-base {
-    background-color: #f4f3f0;
-    color: #003342 !important;
+.cover-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
-.bg-primary {
-    background-color: #003342 !important;
-    color: #f4f3f0 !important;
+
+.footer-link {
+    color: white;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding-bottom: 4px;
 }
 
-.bg-secondary {
-    background-color: #9bbab5 !important;
+.footer-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
 }
 
-/* HEADER */
-
-nav {
-    background-color: transparent;
+.footer-link:hover::after,
+.footer-link:focus::after {
+    transform: translateX(-50%) scaleX(1);
 }
+
+.footer-link:hover,
+.footer-link:focus,
+.hero-btn:hover,
+.hero-btn:focus {
+    transform: translateY(-2px);
+}
+
+.hero-btn {
+    transition: transform 0.3s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+
+
+/* NAVBAR */
 
 .offcanvas,
 .dropdown-menu {
-    background-color: #f4f3f0;
+    background-color: #003342;
+    color: #f4f3f0;
 }
 
-.offcanvas-title,
-.nav-link,
-.nav-item,
-.navbar-nav .nav-link.dropdown-toggle:not(.show),
 .navbar .btn:hover,
 .navbar .btn:focus,
 .hero-btn,
@@ -41,10 +76,6 @@ nav {
 .navbar-toggler {
     color: #003342 !important;
     background-color: #f4f3f0 !important;
-}
-
-.navbar .btn {
-    height: 42px;
 }
 
 .navbar .btn,
@@ -55,20 +86,25 @@ nav {
 
 .navbar-toggler:focus,
 .navbar-toggler:hover,
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus,
-.navbar-nav .nav-link.dropdown-toggle.show,
-.navbar-nav .nav-link.dropdown-toggle:not(.show):hover,
-.navbar-nav .nav-link.dropdown-toggle:focus,
-.dropdown-item:hover,
-.dropdown-item:focus,
 .navbar .btn:hover,
 .navbar .btn:focus,
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: #003342 !important;
     color: #f4f3f0 !important;
+}
+
+.navbar-nav .nav-link,
+.dropdown-item {
+    color: #f4f3f0;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.dropdown-toggle[aria-expanded="true"],
+.dropdown-item:hover {
+    background-color: #f4f3f0 !important;
+    color: #003342 !important;
 }
 
 .dropdown-item {
@@ -102,6 +138,10 @@ nav {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 51, 66, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+.offcanvas .btn-close {
+    --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f4f3f0'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/%3e%3c/svg%3e");
+}
+
 .navbar-nav .dropdown-menu {
     position: static !important;
     float: none;
@@ -127,366 +167,32 @@ nav {
     pointer-events: auto;
 }
 
-.navbar .req-btn {
-    animation: slideInRight 1s ease-out forwards;
-    opacity: 0;
-    transform: translateX(100%);
-    animation-delay: 0.4s;
-}
-
-.navbar .navbar-toggler {
-    animation: slideInRight 1s ease-out forwards;
-    opacity: 0;
-    transform: translateX(100%);
-    animation-delay: 0.6s;
-}
-
-/* HERO */
-
-.hero {
-    position: relative;
-    background-image: url(../images/1920x1080-webp/04\ -\ Ryans\ Waterblasting\ Photos_1920px.webp);
-    background-size: cover;
-    background-position: 15% 15%;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    color: #f4f3f0;
-}
-
-.hero .overlay {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    z-index: 0;
-}
-
-.hero .container {
-    z-index: 1;
-}
 
 
-/* RESULTS */
-
-/* BEFORE AND AFTER */
-
-.b-a-container {
-    place-content: center;
-    --position: 50%;
-}
-
-.image-before {
-    z-index: 1;
-    inset: 0;
-    clip-path: inset(0 calc(100% - var(--position)) 0 0);
-}
-
-.image-after {
-    z-index: 0;
-}
-
-.image-before,
-.image-after {
-    object-fit: cover;
-    object-position: left;
-}
-
-.b-a-label {
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 3;
-    pointer-events: none;
-    background-color: #003342;
-    color: #f4f3f0;
-}
-
-.b-a-container.show-labels .b-a-label {
-    opacity: 1;
-}
-
-.before-label {
-    top: .5rem;
-    left: .5rem;
-}
-
-.after-label {
-    top: .5rem;
-    right: .5rem;
-}
-
-.b-a-slider {
-    inset: 0;
-    cursor: pointer;
-    z-index: 2;
-}
-
-.b-a-slider:focus-visible~.b-a-slider-button {
-    outline: 4px solid #003342;
-    outline-offset: 3px;
-}
-
-.b-a-slider-line {
-    inset: 0;
-    width: 0.2rem;
-    background-color: #f4f3f0;
-    z-index: 4;
-    left: var(--position);
-    transform: translate(-50%);
-    pointer-events: none;
-}
-
-.b-a-slider-button {
-    background-color: #f4f3f0;
-    border-radius: 100vw;
-    place-items: center;
-    top: 50%;
-    left: var(--position);
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 5;
-}
-
-/* PAGE DIVIDERS */
-
-.waves-top {
-    background-image: url(../images/svg/layered-waves-haikei-top.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-    height: 8em;
-}
-
-.waves-bottom {
-    background-image: url(../images/svg/layered-waves-haikei-bottom.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    height: 8em;
-}
-
-/* ABOUT US */
-
-.about-btn {
-    background-color: #f4f3f0;
-    color: #003342;
-    border: 2px solid #003342 !important;
-}
-
-.about-btn:hover,
-.about-btn:focus {
-    background-color: #003342;
-    color: #f4f3f0;
-}
-
-
-/* SERVICES */
-
-.service-card {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-    border: none;
-    position: relative;
-    overflow: hidden;
-    color: white;
-}
-
-.service-overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 0.75rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* FOOTER */
-
-.footer {
-    z-index: 1000;
-}
-
-.hr {
-    background-color: #f4f3f0;
-    height: 1px;
-}
-
-.footer-link {
-  color: #f4f3f0 !important;
-  position: relative;
-  text-decoration: none;
-  display: inline-block;
-  transition: color 0.3s ease, transform 0.3s ease;
-    padding-bottom: 4px;
-}
-
-/* Center-out underline */
-.footer-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 100%;
-  height: 2px;
-  background-color: currentColor;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
-}
-
-/* Trigger underline */
-.footer-link:hover::after,
-.footer-link:focus::after {
-  transform: translateX(-50%) scaleX(1);
-}
-
-/* Trigger bounce */
-.footer-link:hover,
-.footer-link:focus {
-  transform: translateY(-2px); /* Bounce up */
-}
-
-/* BREAKPOINTS */
-
-/* HORIZONTAL PHONES */
-
-@media only screen and (min-width: 36em) {
-
-    .waves-bottom,
-    .waves-top {
-        height: 10em;
-    }
-}
-
-/* TABLETS */
-
-@media only screen and (min-width: 48em) {
-
-    .waves-bottom,
-    .waves-top {
-        height: 15em;
-    }
-}
-
-/* DESKTOP */
-
-@media only screen and (min-width: 62em) {
-
-    .waves-bottom,
-    .waves-top {
-        height: 18em;
-    }
-}
-
-@media only screen and (min-width: 75em) {
-
-    .waves-bottom,
-    .waves-top {
-        height: 21em;
-    }
-}
-
-@media only screen and (min-width: 90em) {
-
-    .waves-bottom,
-    .waves-top {
-        height: 27em;
-    }
-}
-
-@media only screen and (min-width: 120em) {
-
-    .waves-bottom,
-    .waves-top {
-        height: 38em;
-    }
-}
-
-@media only screen and (min-width: 160em) {
-
-    .waves-bottom,
-    .waves-top {
-        height: 40em;
-    }
-}
 
 /* ANIMATIONS */
 
-.animate-on-scroll {
-    opacity: 0;
-    will-change: opacity, transform;
-}
-
-.slide-in-left.start-animation {
-    animation: slideInLeft 0.8s ease-out forwards;
-}
-
-.slide-in-right.start-animation {
-    animation: slideInRight 0.8s ease-out forwards;
-}
-
-.slide-in-up.start-animation {
-    animation: slideInUp 1s ease-out forwards;
-}
-
 .animate-up-stagger {
-    animation-name: slideInUp;
-    animation-duration: 0.8s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-out;
-    opacity: 0;
-    transform: translateY(100px);
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: transform, opacity;
 }
 
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100vw);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.animate-up-stagger.animate-up-stagger-active {
+  animation-name: slideInUp;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
 
 @keyframes slideInUp {
     from {
-        transform: translateY(100px);
+        transform: translateY(20px);
         opacity: 0;
     }
 
     to {
         transform: translateY(0);
         opacity: 1;
-    }
-}
-
-@keyframes bounce {
-
-    0%,
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
-
-    50% {
-        transform: translateX(-50%) translateY(10px);
     }
 }

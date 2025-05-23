@@ -1,149 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="min-vh-100">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roof Wash Specialists</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href="resources/css/styles.css" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" as="style"
+        onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    </noscript>
+
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script defer src="resources/js/accessibility.js"></script>
     <script defer src="resources/js/staggerAnimation.js"></script>
 </head>
 
-<body>
-    <header>
-        <nav class="navbar fixed-top">
-            <div class="container-fluid d-flex justify-content-end align-items-center gap-2 pe-3">
+<body class="d-flex min-vh-100 text-center">
+    <div class="d-flex min-vw-100 min-vh-100 mx-auto flex-column cover">
+        <div class="cover-overlay"></div>
+        <header class="mb-auto">
+            <nav class="navbar" aria-label="Offcanvas Navbar">
+                <div class="container-fluid">
+                    <div class="ms-auto d-flex">
+                        <a href="pages/contact.html"
+                            class="btn btn-md d-none d-md-flex align-items-center me-2 req-btn">
+                            <span class="material-symbols-outlined me-1 fs-4">home_work</span>
+                            Request a Quote
+                        </a>
 
-                <div class="d-none d-md-block">
-                    <a href="pages/contact.html" class="btn btn-md d-flex align-items-center req-btn"><span
-                            class="material-symbols-outlined me-1 fs-4">
-                            home_work
-                        </span>Request a Quote</a>
-                </div>
+                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Roof Wash Specialists</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link active d-flex align-items-center" aria-current="page" href="#"><span
-                                        class="material-symbols-outlined mx-2">
-                                        home
-                                    </span>Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center" href="pages/about-us.html"><span
-                                        class="material-symbols-outlined mx-2">
-                                        supervisor_account
-                                    </span>About Us</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="pages/services.html"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false"><span
-                                        class="material-symbols-outlined mx-2">
-                                        handyman
-                                    </span>Services</a>
-                                <ul class="dropdown-menu rounded-0">
-                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
-                                            href="pages/roof-treatment.html"><span
-                                                class="material-symbols-outlined mx-2">
-                                                roofing
-                                            </span>Roof Treatment</a>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                            aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <img src="./resources/images/logo.png" class="navbar-brand w-75 mx-auto d-block mb-4"
+                                    alt="Logo">
+                                <ul class="navbar-nav flex-grow-1 px-1 fs-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link active d-flex align-items-center" aria-current="page"
+                                            href="#"><span class="material-symbols-outlined mx-2 fs-3">
+                                                home
+                                            </span>Home</a>
                                     </li>
-                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
-                                            href="pages/house-wash.html"><span class="material-symbols-outlined mx-2">
-                                                water_damage
-                                            </span>House Wash</a></li>
-                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
-                                            href="pages/gutter-cleaning.html"><span
-                                                class="material-symbols-outlined mx-2">
-                                                tools_ladder
-                                            </span>Gutter Cleaning</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" href="pages/about-us.html"><span
+                                                class="material-symbols-outlined mx-2 fs-3">
+                                                supervisor_account
+                                            </span>About Us</a>
                                     </li>
-                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
-                                            href="pages/deck-and-driveway-cleaning.html"><span
-                                                class="material-symbols-outlined mx-2">
-                                                deck
-                                            </span>Deck & Driveway
-                                            Cleaning</a></li>
-                                    <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
-                                            href="pages/window-cleaning.html"><span
-                                                class="material-symbols-outlined mx-2">
-                                                window
-                                            </span>Window Cleaning</a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle d-flex align-items-center"
+                                            href="pages/services.html" role="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false"><span class="material-symbols-outlined mx-2 fs-3">
+                                                handyman
+                                            </span>Services</a>
+                                        <ul class="dropdown-menu fs-5 rounded-0">
+                                            <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
+                                                    href="pages/roof-treatment.html"><span
+                                                        class="material-symbols-outlined mx-2 fs-5">
+                                                        roofing
+                                                    </span>Roof Treatment</a>
+                                            </li>
+                                            <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
+                                                    href="pages/house-wash.html"><span
+                                                        class="material-symbols-outlined mx-2 fs-5">
+                                                        water_damage
+                                                    </span>House Wash</a></li>
+                                            <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
+                                                    href="pages/gutter-cleaning.html"><span
+                                                        class="material-symbols-outlined mx-2 fs-5">
+                                                        tools_ladder
+                                                    </span>Gutter Cleaning</a>
+                                            </li>
+                                            <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
+                                                    href="pages/deck-and-driveway-cleaning.html"><span
+                                                        class="material-symbols-outlined mx-2 fs-5">
+                                                        deck
+                                                    </span>Decks & Driveways
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item d-flex align-items-center p-2 ps-4"
+                                                    href="pages/window-cleaning.html"><span
+                                                        class="material-symbols-outlined mx-2 fs-5">
+                                                        window
+                                                    </span>Window Cleaning</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" href="pages/contact.html"><span
+                                                class="material-symbols-outlined mx-2 fs-3">
+                                                contact_page
+                                            </span>Contact</a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center" href="pages/contact.html"><span
-                                        class="material-symbols-outlined mx-2">
-                                        contact_page
-                                    </span>Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="pb-4">
-        <section class="hero d-flex align-items-center">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row flex-column align-items-center">
-                    <div class="col-12 col-md-8 col-lg-4 text-center">
-                        <img src="./resources/images/logo.png" class="img-fluid mx-auto d-block animate-up-stagger" alt="Logo">
-                    </div>
-                    <div class="col-12 col-md-10 col-lg-8 text-center">
-                        <h1 class="display-5 fw-bold animate-up-stagger">Complete Exterior Cleaning.<br>Remarkable Results.</h1>
-                        <p class="lead mb-4 animate-up-stagger">From roofs to driveways, windows to walls — we deliver expert exterior
-                            cleaning for homes and businesses across the Wellington Region.</p>
-
-                        <div class="d-grid gap-3 d-sm-flex justify-content-center animate-up-stagger">
-                            <a href="pages/services.html"
-                                class="btn fw-bold btn-lg d-flex align-items-center hero-btn"><span
-                                    class="material-symbols-outlined me-2 fs-3">
-                                    handyman
-                                </span>Our Services</a>
-                            <a href="pages/contact.html"
-                                class="btn fw-bold btn-lg d-flex align-items-center hero-btn"><span
-                                    class="material-symbols-outlined me-2 fs-3">
-                                    home_work
-                                </span>Request a Quote</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </nav>
+        </header>
+
+        <main class="py-5">
+            <section class="d-flex align-items-center">
+                <div class="container">
+                    <div class="row flex-column align-items-center">
+                        <div class="col-12 col-md-8 col-lg-4 text-center">
+                            <img src="./resources/images/logo.png" class="img-fluid mx-auto d-block animate-up-stagger"
+                                alt="Logo">
+                        </div>
+                        <div class="col-12 col-md-10 col-lg-8 text-center text-white">
+                            <h1 class="display-5 fw-bold animate-up-stagger">Complete Exterior Cleaning.<br>Remarkable
+                                Results.</h1>
+                            <p class="lead mb-4 animate-up-stagger">From roofs to driveways, windows to walls — we
+                                deliver
+                                expert exterior
+                                cleaning for homes and businesses across the Wellington Region.</p>
+
+                            <div class="d-grid gap-3 d-sm-flex justify-content-center animate-up-stagger">
+                                <a href="pages/services.html"
+                                    class="btn fw-bold btn-lg d-flex align-items-center hero-btn"><span
+                                        class="material-symbols-outlined me-2 fs-3">
+                                        handyman
+                                    </span>Our Services</a>
+                                <a href="pages/contact.html"
+                                    class="btn fw-bold btn-lg d-flex align-items-center hero-btn"><span
+                                        class="material-symbols-outlined me-2 fs-3">
+                                        home_work
+                                    </span>Request a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-auto">
+            <div
+                class="d-flex flex-column flex-md-row text-center justify-content-center gap-2 animate-up-stagger py-4 lead">
+                <div><a href="/pages/about-us.html" class="footer-link mx-2">About Us</a></div>
+                <div><a href="/pages/terms-and-conditions" class="footer-link mx-2">Terms & Conditions</a></div>
+                <div><a href="/privacy-policy" class="footer-link mx-2">Privacy Policy</a></div>
             </div>
-        </section>
-    </main>
 
-    <footer class="fixed-bottom col-primary p-4 mt-5">
-        <div class="d-flex flex-column flex-md-row text-center justify-content-center gap-2 animate-up-stagger">
-            <div><a href="/pages/about-us.html" class="footer-link mx-2">About Us</a></div>
-            <div><a href="/pages/terms-and-conditions" class="footer-link mx-2">Terms & Conditions</a></div>
-            <div><a href="/privacy-policy" class="footer-link mx-2">Privacy Policy</a></div>
-        </div>
-
-        <div class="opacity-50 hr my-3 w-75 mx-auto animate-up-stagger"></div>
-
-        <div class="col-auto text-center small mb-4 animate-up-stagger">
-            &copy; 2025 Roof Wash Specialists. All Rights Reserved.
-        </div>
-    </footer>
+            <div class="col-auto text-center small mb-4 animate-up-stagger text-white mx-3">
+                &copy; 2025 Roof Wash Specialists. All Rights Reserved.
+            </div>
+        </footer>
+    </div>
 </body>
